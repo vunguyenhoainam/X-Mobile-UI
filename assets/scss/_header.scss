@@ -1,0 +1,122 @@
+.header {
+    padding: 1.5rem 0;
+    background-color: $red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    .container {
+        .header__top {
+            @include flex(flex, space-between, center, nowrap);
+            .header-logo {
+                @include font(4.8rem, 600, normal);
+                color: $white;
+                text-shadow: 5px 2px 4px $gray;
+            }
+            .header-address {
+                padding: 1rem;
+                @include flex(flex, flex-start, center, nowrap);
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                .icon-address {
+                    fill: $white;
+                }
+                p {
+                    margin-left: .5rem;
+                    @include font(1.4rem, 600, normal);
+                    color: $white;
+                }
+            }
+            .header-search {
+                position: relative;
+                input {
+                    width: 35rem;
+                    padding: 1rem 4rem 1rem 2rem;
+                    @include font(1.5rem, 500, normal);
+                    outline: none;
+                    color: $gray;
+                    border: 0;
+                    border-radius: 8px;
+                    @include line-text(1);
+                }
+                .icon-search {
+                    position: absolute;
+                    top: 50%;
+                    right: 1.5rem;
+                    transform: translateY(-50%);
+                    font-size: 1.8rem;
+                    color: $gray;
+                    cursor: pointer;
+                }
+            }
+            .header-hotline {
+                .icon-hotline {
+                    fill: $white;
+                }
+                @include flex(flex, flex-start, center, nowrap);
+                p {
+                    margin-left: 1rem;
+                    span {
+                        display: block;
+                        @include font(1.6rem, 600, normal);
+                        color: $white;
+                        &:last-child {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                &:hover {
+                    p {
+                        span {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .header-cart {
+                position: relative;
+                @include flex(flex, flex-start, center, nowrap);
+                .icon-cart {
+                    font-size: 2.2rem;
+                    color: $white;
+                }
+                .notifi {
+                    position: absolute;
+                    top: -14px;
+                    left: 18px;
+                    width: 20px;
+                    height: 20px;
+                    @include flex(flex, center, center, nowrap);
+                    @include font(1.3rem, 600, normal);
+                    color: $white;
+                    background-color: orange;
+                    border-radius: 50%;
+                }
+                p {
+                    margin-left: .5rem;
+                    @include font(1.4rem, 600, normal);
+                    color: $white;
+                }
+            }
+        }
+        .header__bottom {
+            margin-top: 1rem;
+            ul {
+                padding: 0 1.5rem;
+                @include flex(flex, space-between, center, nowrap);
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                li {
+                    a {
+                        padding: 1rem 0;
+                        @include flex(flex, flex-start, center, nowrap);
+                        @include font(1.6rem, 600, normal);
+                        text-transform: uppercase;
+                        color: $white;
+                        i {
+                            font-size: 2rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
