@@ -47,7 +47,19 @@ select {
 .wrapper {
   max-width: 100%;
   margin: 0 auto;
-  // overflow: hidden;
+}
+.sp {
+  display: block !important;
+  @include mq_min_1024 {
+    display: none !important;
+  }
+}
+
+.pc {
+  display: none !important;
+  @include mq_min_1024 {
+    display: block !important;
+  }
 }
 .container {
   margin: 0 auto;
@@ -233,18 +245,4 @@ select {
 .nowrap {
   flex-wrap: nowrap;
 }
-
-.sp {
-  display: block !important;
-  @include mq_min_576 {
-    display: none !important;
-  }
-}
-.pc {
-  display: none !important;
-  @include mq_min_576 {
-    display: block !important;
-  }
-}
-
 

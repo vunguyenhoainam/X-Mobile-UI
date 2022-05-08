@@ -5,16 +5,34 @@
     .container {
         .header__top {
             @include flex(flex, space-between, center, nowrap);
-            .header-logo {
-                @include font(4.8rem, 600, normal);
+            .header-logo-pc {
+                display: none;
+                @include font(3rem, 600, normal);
                 color: $white;
                 text-shadow: 5px 2px 4px $gray;
+                @include mq_min_768 {
+                    display: block;
+                    font-size: 3.2rem;
+                }
+                @include mq_min_1024 {
+                    font-size: 4.8rem;
+                }
+            }
+            .header-logo-sp {
+                max-width: 3.5rem;
+                @include mq_min_768 {
+                    display: none;
+                }
             }
             .header-address {
+                max-width: 23rem;
                 padding: 1rem;
                 @include flex(flex, flex-start, center, nowrap);
                 background: rgba(255, 255, 255, 0.2);
                 border-radius: 8px;
+                @include mq_max_1024 {
+                    display: none;
+                }
                 .icon-address {
                     fill: $white;
                 }
@@ -22,12 +40,17 @@
                     margin-left: .5rem;
                     @include font(1.4rem, 600, normal);
                     color: $white;
+                    @include line-text(1);
                 }
             }
             .header-search {
                 position: relative;
+                max-width: 15rem;
+                @include mq_min_350 {
+                    max-width: 20rem;
+                }
                 input {
-                    width: 35rem;
+                    width: 100%;
                     padding: 1rem 4rem 1rem 2rem;
                     @include font(1.5rem, 500, normal);
                     outline: none;
@@ -35,6 +58,7 @@
                     border: 0;
                     border-radius: 8px;
                     @include line-text(1);
+                    
                 }
                 .icon-search {
                     position: absolute;
@@ -47,10 +71,13 @@
                 }
             }
             .header-hotline {
+                display: none;
+                @include mq_min_768 {
+                    @include flex(flex, flex-start, center, nowrap);
+                }
                 .icon-hotline {
                     fill: $white;
                 }
-                @include flex(flex, flex-start, center, nowrap);
                 p {
                     margin-left: 1rem;
                     span {
@@ -90,13 +117,60 @@
                     border-radius: 50%;
                 }
                 p {
-                    margin-left: .5rem;
+                    display: none;
+                    margin-left: 1rem;
                     @include font(1.4rem, 600, normal);
                     color: $white;
+                    @include mq_min_1024 {
+                        display: block;
+                    }
+                }
+            }
+            .btn-menu-sp {
+                position: relative;
+                width: 2.5rem;
+                height: 4rem;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    right: 0;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 2.5rem;
+                    height: .3rem;
+                    border-radius: 10px;
+                    background-color: $white;
+                    &:first-child {
+                        top: 30%;
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                    }
+                    &:last-child {
+                        top: 70%;
+                    }
+                }
+            }
+            .active {
+                span {
+                    &:first-child {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:last-child {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(-45deg);
+                    }
                 }
             }
         }
         .header__bottom {
+            @include mq_max_1024 {
+                display: none;
+            }
             margin-top: 1rem;
             ul {
                 padding: 0 1.5rem;
@@ -107,9 +181,12 @@
                     a {
                         padding: 1rem 0;
                         @include flex(flex, flex-start, center, nowrap);
-                        @include font(1.6rem, 600, normal);
+                        @include font(1.4rem, 600, normal);
                         text-transform: uppercase;
                         color: $white;
+                        @include mq_min_1200 {
+                            font-size: 1.6rem;
+                        }
                         i {
                             font-size: 2rem;
                             margin-right: 1rem;
