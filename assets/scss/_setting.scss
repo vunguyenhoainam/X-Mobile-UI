@@ -2,6 +2,8 @@ $white: #ffffff;
 $dark: #3E3E3E;
 $black: #2F2F2F;
 $gray: #5F5F5F;
+$gray-1: #f3f3f3;
+$gray-2: #b8b8b8;
 $red: #d70018;
 $blue: #007ac0;
 
@@ -28,6 +30,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -35,6 +38,10 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  transition: all .3s ease;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 input,
