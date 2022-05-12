@@ -545,7 +545,7 @@ select {
   width: 2.5rem;
   height: 4rem;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
 }
 .header .container .header__top .btn-menu-sp span {
   position: absolute;
@@ -565,6 +565,9 @@ select {
 }
 .header .container .header__top .btn-menu-sp span:last-child {
   top: 70%;
+}
+.header .container .header__top .active span {
+  background-color: #2F2F2F;
 }
 .header .container .header__top .active span:first-child {
   top: 50%;
@@ -667,14 +670,17 @@ select {
   top: 0;
   right: 0;
   width: 100%;
+  height: 100vh;
   transform: translateX(100%);
+  transition: all 0.5s ease;
   opacity: 0;
   visibility: hidden;
   background-color: #ffffff;
+  z-index: 999;
 }
 .header .container .menu-sp h2 {
   padding: 2rem;
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-weight: 600;
   line-height: normal;
   color: #d70018;
@@ -684,7 +690,8 @@ select {
   padding: 0 2rem;
 }
 .header .container .menu-sp ul li {
-  margin: 3rem 0;
+  padding: 2rem;
+  border-bottom: 1px solid #b8b8b8;
 }
 .header .container .menu-sp ul li a {
   font-size: 1.8rem;

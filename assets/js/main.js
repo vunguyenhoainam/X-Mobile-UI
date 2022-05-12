@@ -11,7 +11,7 @@ var RUN = {
   slide:function() {
     $(".list-slide-item").slick({
       arrows: true,
-      // autoplay: 3000,
+      autoplay: 3000,
       speed: 800,
       prevArrow: $('.btn-pre'),
       nextArrow: $('.btn-next'),
