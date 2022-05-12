@@ -83,6 +83,12 @@
                     }
                 }
             }
+            img {
+                border-radius: 0;
+                @include mq_min_1024 {
+                    border-radius: 8px;
+                }
+            }
         }
     }
 

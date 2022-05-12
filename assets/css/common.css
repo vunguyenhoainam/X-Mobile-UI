@@ -800,6 +800,14 @@ select {
 .main .banner .container .banner__right a:not(:first-child) {
   margin-top: 0.5rem;
 }
+.main .banner .container img {
+  border-radius: 0;
+}
+@media screen and (min-width: 1024px) {
+  .main .banner .container img {
+    border-radius: 8px;
+  }
+}
 .main .products {
   margin: 6rem 0;
   background: url("../images/pc/background.png") no-repeat;
