@@ -59,27 +59,41 @@
                                     font-size: 2.2rem;
                                 }
                             }
-                            span {
-                                margin-left: 2rem;
+                            p {
+                                margin: 0 1rem 0 2rem;
                                 @include font(1.6rem, 500, normal);
                                 text-decoration: line-through;
                             }
+                            span {
+                                padding: .5rem .8rem;
+                                background-color: $red;
+                                border-radius: 5px;
+                                color: $white;
+                                @include font(1.4rem, 600, normal);
+                            }
                         }
-                        .ship {
+                        .quantity {
                             margin-top: 2rem;
-                            padding: 1rem;
-                            @include font(1.4rem, 500, normal);
-                            color: $white;
-                            text-align: center;
-                            background-color: $red;
-                            border-radius: 8px;
-                            opacity: .9;
-                            .icon-ship {
-                                margin-right: .8rem;
+                            @include flex(flex, flex-start, center, nowrap);
+                            p {
+                                @include font(1.6rem, 600, normal);
+                            }
+                            input {
+                                margin-left: 1rem;
+                                padding: .2rem .5rem;
+                                width: 10%;
+                                outline: none;
                             }
                         }
                         .description {
                             padding: 2rem 0;
+                            p {
+                                margin-bottom: .5rem;
+                                @include font(1.6rem, 600, normal);
+                            }
+                            & > div {
+                                padding: 0 0 0 2rem;
+                            }
                         }
                         .warranty {
                             background-color: #fffae7;

@@ -1152,30 +1152,51 @@ select {
     font-size: 2.2rem;
   }
 }
-.main .detail .container .product-detail .content .content-right .product-price span {
-  margin-left: 2rem;
+.main .detail .container .product-detail .content .content-right .product-price p {
+  margin: 0 1rem 0 2rem;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: normal;
   text-decoration: line-through;
 }
-.main .detail .container .product-detail .content .content-right .ship {
-  margin-top: 2rem;
-  padding: 1rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: normal;
-  color: #ffffff;
-  text-align: center;
+.main .detail .container .product-detail .content .content-right .product-price span {
+  padding: 0.5rem 0.8rem;
   background-color: #d70018;
-  border-radius: 8px;
-  opacity: 0.9;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: normal;
 }
-.main .detail .container .product-detail .content .content-right .ship .icon-ship {
-  margin-right: 0.8rem;
+.main .detail .container .product-detail .content .content-right .quantity {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.main .detail .container .product-detail .content .content-right .quantity p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.main .detail .container .product-detail .content .content-right .quantity input {
+  margin-left: 1rem;
+  padding: 0.2rem 0.5rem;
+  width: 10%;
+  outline: none;
 }
 .main .detail .container .product-detail .content .content-right .description {
   padding: 2rem 0;
+}
+.main .detail .container .product-detail .content .content-right .description p {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.main .detail .container .product-detail .content .content-right .description > div {
+  padding: 0 0 0 2rem;
 }
 .main .detail .container .product-detail .content .content-right .warranty {
   background-color: #fffae7;
